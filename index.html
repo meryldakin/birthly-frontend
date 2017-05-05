@@ -4,13 +4,36 @@
     <meta charset="utf-8">
     <title>Birthly</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
   </head>
   <body>
+    <nav>
+      <div class="container teal">
+        <div class="row">
+          <div class="col s12">
+
+            <a href="#" class="brand-logo center">Birthly</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <!-- <li><a href="sass.html">Sass</a></li>
+              <li><a href="badges.html">Components</a></li>
+              <li><a href="collapsible.html">JavaScript</a></li> -->
+            </ul>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s12">
+            <p class="center-align">The Less Good Birthday Reminder Than Facebook</p>
+
+            </div>
+          </div>
+      </div>
+    </nav>
     <div class="container">
-      <h4>The Less Good Birthday Reminder Than Facebook</h4>
       <div class="row">
         <div class="col s4">
+          <h3>Enter a friend</h3>
           <form id="create-birthday">
             <label>Name</label>
             <input id="name" type="text" placeholder="Name">
@@ -81,19 +104,57 @@
 
         </div>
         <div class="col s8" id="bday-list">
-          <ul class="collection with-header">
-            <li class="collection-header" id="january1">January</li>
-            <li class="collection-header" id="february1">February</li>
-            <li class="collection-header" id="march1">March</li>
-            <li class="collection-header" id="april1">April</li>
-            <li class="collection-header" id="may1">May</li>
-            <li class="collection-header" id="june1">June</li>
-            <li class="collection-header" id="july1">July</li>
-            <li class="collection-header" id="august1">August</li>
-            <li class="collection-header" id="september1">September</li>
-            <li class="collection-header" id="october1">October</li>
-            <li class="collection-header" id="november1">November</li>
-            <li class="collection-header" id="december1">December</li>
+          <p id="new-friend"></p>
+          <button type="button" class="btn" name="button" id="toggle-btn">Toggle Open/Close</button>
+          <ul class="collapsible" data-collapsible="expandable">
+            <li>
+              <div class="collapsible-header"><h5>January</h5></div>
+              <div class="collapsible-body"><ul id="january1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>February</h5></div>
+              <div class="collapsible-body"><ul id="february1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>March</h5></div>
+              <div class="collapsible-body"><ul id="march1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>April</h5></div>
+              <div class="collapsible-body"><ul id="april1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>May</h5></div>
+              <div class="collapsible-body"><ul id="may1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>June</h5></div>
+              <div class="collapsible-body"><ul id="june1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>July</h5></div>
+              <div class="collapsible-body"><ul id="july1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>August</h5></div>
+              <div class="collapsible-body"><ul id="august1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>September</h5></div>
+              <div class="collapsible-body"><ul id="september1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>October</h5></div>
+              <div class="collapsible-body"><ul id="october1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>November</h5></div>
+              <div class="collapsible-body"><ul id="november1" class="calendar"></ul></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><h5>December</h5></div>
+              <div class="collapsible-body"><ul id="december1" class="calendar"></ul></div>
+            </li>
           </ul>
 
         </div>
@@ -102,7 +163,8 @@
 
 
     </div>
-
+    <script type="text/javascript" src="/src/models/Friend.js"></script>
+    <script type="text/javascript" src="/src/views/FriendList.js"></script>
     <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
